@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h2>Liste des ordinateurs</h2>
+    <li class="nav-item">
+      <a [routerLink]="['/createcomputer']" class="btn btn-link">Ajouter</a>
+    </li>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Technicien Responsable</th>
+          <th>Utilisateur</th>
+          <th>Statut</th>
+          <th>Type Ordinateur</th>
+          <th>Modèle</th>
+          <th>Numéro de Série</th>
+          <th>Commentaire</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let computer of computers">
+          <td>{{ computer.id }}</td>
+          <td>{{ computer.nom }}</td>
+          <td>{{ computer.technicienResponsable }}</td>
+          <td>{{ computer.utilisateur }}</td>
+          <td>{{ computer.statut }}</td>
+          <td>{{ computer.typeOrdinateur }}</td>
+          <td>{{ computer.modele }}</td>
+          <td>{{ computer.numSerie }}</td>
+          <td>{{ computer.commentaire }}</td>
+          <td>
+            <button (click)="UpdateComputer(computer.id)" class="btn btn-info">Modifier</button>
+            <button (click)="DeleteComputer(computer.id)" class="btn btn-info">Supprimer</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

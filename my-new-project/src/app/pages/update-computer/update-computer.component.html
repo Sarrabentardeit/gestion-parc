@@ -1,0 +1,46 @@
+<div class="container">
+    <h3>Create Computer</h3>
+<form (ngSubmit) = "onSubmit()">
+<div class="form-group">
+    <label >nom</label>
+    <input type="text" class="form-control" id="nom" [(ngModel)]="computer.nom" name="nom">
+
+</div>
+<div class="form-group">
+    <label >technicienResponsable</label>
+    <input type="text" class="form-control" id="technicienResponsable" [(ngModel)]="computer.technicienResponsable " name="technicienResponsable">
+
+</div>
+<div class="form-group">
+    <label >utilisateur</label>
+    <input type="text" class="form-control" id="utilisateur" [(ngModel)]="computer.utilisateur " name="utilisateur">
+
+</div>
+<div class="form-group">
+    <label >statut</label>
+    <input type="text" class="form-control" id="statut" [(ngModel)]=" computer.statut " name="statut">
+
+</div>
+<div class="form-group">
+    <label >typeOrdinateur</label>
+    <input type="text" class="form-control" id="typeOrdinateur" [(ngModel)]=" computer.typeOrdinateur " name="typeOrdinateur">
+
+</div>
+<div class="form-group">
+    <label >modele</label>
+    <input type="text" class="form-control" id="modele" [(ngModel)]=" computer.modele " name="modele">
+
+</div>
+<div class="form-group">
+    <label >numSerie</label>
+    <input type="text" class="form-control" id="numSerie" [(ngModel)]=" computer.numSerie " name="modele">
+
+</div>
+<div class="form-group">
+    <label >commentaire</label>
+    <input type="text" class="form-control" id="commentaire" [(ngModel)]=" computer.commentaire " name="commentaire">
+
+</div>
+<button class="btn btn-success" type="submit">Submit</button>
+</form>
+</div>
